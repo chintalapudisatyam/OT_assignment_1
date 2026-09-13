@@ -1,0 +1,108 @@
+======================================================================
+TRANSPORTATION PROBLEM
+======================================================================
+
+Using Vogel's Approximation Method (VAM)...
+
+Initial Basic Feasible Solution obtained using VAM:
+
+Allocation Table:
+-----------------------------------------------------------------
+Warehouse 1 -> Market 1: 5 units (Cost = 5 × 19)
+Warehouse 1 -> Market 4: 2 units (Cost = 2 × 10)
+Warehouse 2 -> Market 3: 7 units (Cost = 7 × 40)
+Warehouse 2 -> Market 4: 2 units (Cost = 2 × 60)
+Warehouse 3 -> Market 2: 8 units (Cost = 8 × 8)
+Warehouse 3 -> Market 4: 10 units (Cost = 10 × 20)
+-----------------------------------------------------------------
+Total Transportation Cost = 779
+
+
+======================================================================
+APPLYING MODI METHOD
+======================================================================
+
+
+======================================================================
+MODI ITERATION 1
+======================================================================
+
+U values: [0, 50, 10]
+V values: [19, -2, -10, 10]
+
+Opportunity Costs:
+Cell (1,2) : Delta = 32
+Cell (1,3) : Delta = 60
+Cell (2,1) : Delta = 1
+Cell (2,2) : Delta = -18
+Cell (3,1) : Delta = 11
+Cell (3,3) : Delta = 70
+
+Entering cell: (2,2)
+Most negative Delta = -18
+
+Closed loop:
+(2,2) -> (2,4) -> (3,4) -> (3,2) -> 
+
+Loop signs:
++ (2,2)
+- (2,4)
++ (3,4)
+- (3,2)
+
+Theta = 2
+
+New allocation:
+[5, 0, 0, 2]
+[0, 2, 7, 0]
+[0, 6, 0, 12]
+
+
+======================================================================
+MODI ITERATION 2
+======================================================================
+
+U values: [0, 32, 10]
+V values: [19, -2, 8, 10]
+
+Opportunity Costs:
+Cell (1,2) : Delta = 32
+Cell (1,3) : Delta = 42
+Cell (2,1) : Delta = 19
+Cell (2,4) : Delta = 18
+Cell (3,1) : Delta = 11
+Cell (3,3) : Delta = 52
+
+All opportunity costs are >= 0.
+Therefore, the solution is OPTIMAL.
+
+
+======================================================================
+FINAL OPTIMAL SOLUTION
+======================================================================
+
+Allocation Table:
+-----------------------------------------------------------------
+Warehouse 1 -> Market 1: 5 units (Cost = 5 × 19)
+Warehouse 1 -> Market 4: 2 units (Cost = 2 × 10)
+Warehouse 2 -> Market 2: 2 units (Cost = 2 × 30)
+Warehouse 2 -> Market 3: 7 units (Cost = 7 × 40)
+Warehouse 3 -> Market 2: 6 units (Cost = 6 × 8)
+Warehouse 3 -> Market 4: 12 units (Cost = 12 × 20)
+-----------------------------------------------------------------
+Total Transportation Cost = 743
+
+Initial VAM Cost = 779
+Optimal MODI Cost = 743
+
+Optimal Shipment Plan:
+Warehouse 1 -> Market 1 = 5 units
+Warehouse 1 -> Market 4 = 2 units
+Warehouse 2 -> Market 2 = 2 units
+Warehouse 2 -> Market 3 = 7 units
+Warehouse 3 -> Market 2 = 6 units
+Warehouse 3 -> Market 4 = 12 units
+
+Program completed successfully.
+
+=== Code Execution Successful ===
