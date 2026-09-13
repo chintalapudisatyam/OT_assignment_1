@@ -65,11 +65,3 @@ The total supply and total demand are both `34`, so the problem is balanced.
 **Requirement:** Python 3
 
 ---
-
-## Repository Structure
-
-```text
-.
-├── BigM.py
-├── Transportation.py
-└── README.md
